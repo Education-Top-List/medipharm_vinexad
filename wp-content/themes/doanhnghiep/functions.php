@@ -396,4 +396,31 @@ function search_filter($query) {
 
 add_filter( 'auto_update_plugin', '__return_false' );
 
+
+//SHOW POST COUNT VIEWS 
+function wpb_set_post_views($postID) {
+    $count_key = 'wpb_post_views_count';
+    $count = get_post_meta($postID, $count_key, true);
+    if($count==''){
+        $count = 1;
+        delete_post_meta($postID, $count_key);
+        add_post_meta($postID, $count_key, '1');
+    }else{
+        $count++;
+        update_post_meta($postID, $count_key, $count);
+    }
+}
+
+function wpb_get_post_views($postID){
+    $count_key = 'wpb_post_views_count';
+    $count = get_post_meta($postID, $count_key, true);
+    if($count==''){
+        delete_post_meta($postID, $count_key);
+        add_post_meta($postID, $count_key, '1');
+        return "1";
+    }
+    return $count.'';
+}
+// END SHOW POST COUNT VIEWS
+
 ?>
