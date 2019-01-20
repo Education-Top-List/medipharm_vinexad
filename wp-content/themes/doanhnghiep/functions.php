@@ -1,4 +1,7 @@
 <?php
+require get_template_directory().'/inc/function-admin.php';
+
+
 	// Navigation menus 
 register_nav_menus(array(
 	'primary' => __('Primary Menu'),
@@ -51,24 +54,7 @@ function our_widget_inits(){
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
 	));
-	register_sidebar(array(
-		'name' => 'Footer area 1',
-		'id' => 'footer1',
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
-	));
-	register_sidebar(array(
-		'name' => 'Footer area 2',
-		'id' => 'footer2',
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
-	));
-	register_sidebar(array(
-		'name' => 'Footer area 3',
-		'id' => 'footer3',
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
-	));
+
 }
 add_action('widgets_init','our_widget_inits');
 /** Filter & Hook In Widget Before Post Content .*/
@@ -422,5 +408,22 @@ function wpb_get_post_views($postID){
     return $count.'';
 }
 // END SHOW POST COUNT VIEWS
+
+/* WRAP IMAGE POST CONTENT WITH FIGURE*/
+function filter_images($content){
+    return preg_replace('/<img (.*) \/>\s*/iU', '<figure><img \1 /></figure>', $content);
+}
+add_filter('the_content', 'filter_images');
+/* END WRAP IMAGE POST CONTENT WITH FIGURE*/
+
+add_filter('the_content', 'remove_empty_p', 20, 1);
+function remove_empty_p($content){
+    $content = force_balance_tags($content);
+    return preg_replace('#<p>\s*+(<br\s*/*>)?\s*</p>#i', '', $content);
+}
+
+
+  
+  
 
 ?>
