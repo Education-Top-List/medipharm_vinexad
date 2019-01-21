@@ -1,5 +1,13 @@
 <?php
 require get_template_directory().'/inc/function-admin.php';
+     
+      function load_admin_style() {
+        wp_register_style( 'admin_css', get_template_directory_uri() . '/css/admin.css', false, '1.0.0' );
+//OR
+        wp_enqueue_style('admin_css');
+       }
+
+        add_action( 'admin_enqueue_scripts', 'load_admin_style' );
 
 
 	// Navigation menus 

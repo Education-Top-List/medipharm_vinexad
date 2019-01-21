@@ -3,6 +3,8 @@
 	<?php 
 	$phone_ft = esc_attr(get_option('phone_ft'));
 	$address_ft = esc_attr(get_option('address_ft'));
+	$fax = esc_attr(get_option('fax_ft'));
+	$email = esc_attr(get_option('email_ft'));
 	?>
 
 	<form method="post" action="options.php" class="zang-general-form"> 

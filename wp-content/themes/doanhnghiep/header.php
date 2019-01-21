@@ -60,17 +60,25 @@
 					<?php } ?>
 				</div>
 				<div class="address_header">
-						<ul class="site-lang">
-					<?php pll_the_languages(array('show_flags'=>1,'show_names'=>0)); ?>
-				</ul>
+					<ul class="site-lang">
+						<?php pll_the_languages(array('show_flags'=>1,'show_names'=>0)); ?>
+					</ul>
+					<?php if(get_option('address') || get_option('phone')) { ?>
 					<div class="textwidget">
-								<p><i class="fa fa-map-marker" aria-hidden="true"></i><strong>Địa chỉ : </strong> <em> Số 3 Ngách 22/163 Đường Khuyến Lương - Trần Phú - Hoàng Mai - Hà Nội</em></p>
-						<p><i class="fa fa-phone" aria-hidden="true"></i><strong>Hotline : </strong><a href="tel:0969 95 99 88"> 0934.632.399</a></p>
-					<?php //echo get_option('address'); echo get_option('address_en') ; echo get_option('phone_ft'); echo get_option('address_ft')  ?>
+						<?php if(get_option('address')){ ?>
+							<p><i class="fa fa-map-marker" aria-hidden="true"></i><strong>Địa chỉ : </strong> 
+							<em><?php echo get_option('address');  ?> </em></p>
+						<?php }?>
+						<?php if(get_option('phone')){ ?>
+						<p><i class="fa fa-phone" aria-hidden="true"></i><strong>Hotline : </strong>
+							<a href="tel:<?php echo get_option('phone'); ?>"> <?php echo get_option('phone'); ?></a>
+						</p>
+						<?php }?>	
 					</div>
+				<?php }?>
 				</div>
 				<?php // outputs a flags list (without languages names) ?>
-			
+
 			</div>
 		</div>
 		<div class="middle_header sticky">

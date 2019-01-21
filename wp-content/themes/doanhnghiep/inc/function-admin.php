@@ -31,11 +31,13 @@
 		register_setting('zang-custom-footer','address_ft');
 		register_setting('zang-custom-footer','address_ft_en');
 		register_setting('zang-custom-footer','phone_ft');
-		register_setting('zang-custom-footer','fax');
-		register_setting('zang-custom-footer','email');
+		register_setting('zang-custom-footer','fax_ft');
+		register_setting('zang-custom-footer','email_ft');
 		add_settings_section('zang-customft-option','Custom content footer','zang_customft_option','template_custom_footer');
 		add_settings_field('address-ft','Address Footer', 'zang_sidebar_address_ft','template_custom_footer', 'zang-customft-option');
 		add_settings_field('phone-ft','Phone Footer', 'zang_sidebar_phone_ft','template_custom_footer', 'zang-customft-option');
+		add_settings_field('fax-ft','Fax Footer', 'zang_sidebar_fax_ft','template_custom_footer', 'zang-customft-option');
+		add_settings_field('email-ft','Email Footer', 'zang_sidebar_email_ft','template_custom_footer', 'zang-customft-option');
 	}
 
 	function zang_sidebar_options(){
@@ -49,30 +51,35 @@
 	function zang_sidebar_address(){
 		$address = esc_attr(get_option('address'));
 		$address_en = esc_attr(get_option('address_en'));
-		echo '<input type="text" name="address" value="'.$address.'" placeholder="Vietnamese">';
-		echo '<input type="text" name="address_en" value="'.$address_en.'" placeholder="English">';
+		echo '<input type="text" class="iptext_adm" name="address" value="'.$address.'" placeholder="Vietnamese">';
+		echo '<input type="text" class="iptext_adm" name="address_en" value="'.$address_en.'" placeholder="English">';
 	}
 	function zang_sidebar_phone(){
 		$phone = esc_attr(get_option('phone'));
-		echo '<input type="text" name="phone" value="'.$phone.'" placeholder="">';
+		echo '<input type="text" class="iptext_adm" name="phone" value="'.$phone.'" placeholder="">';
 	}
 	function zang_sidebar_address_ft(){
 		$address_ft = esc_attr(get_option('address_ft'));
 		$address_ft_en = esc_attr(get_option('address_ft_en'));
-		echo '<input type="text" name="address_ft" value="'.$address_ft.'" placeholder="Vietnamese">';
-		echo '<input type="text" name="address_ft_en" value="'.$address_ft_en.'" placeholder="English">';
+		echo '<input type="text" class="iptext_adm" name="address_ft" value="'.$address_ft.'" placeholder="Vietnamese">';
+		echo '<input type="text" class="iptext_adm" name="address_ft_en" value="'.$address_ft_en.'" placeholder="English">';
 	}
 	function zang_sidebar_phone_ft(){
 		$phone_ft = esc_attr(get_option('phone_ft'));
-		echo '<input type="text" name="phone_ft" value="'.$phone_ft.'" placeholder="">';
+		echo '<input type="text" class="iptext_adm" name="phone_ft" value="'.$phone_ft.'" placeholder="">';
+	}
+	function zang_sidebar_fax_ft(){
+		$fax = esc_attr(get_option('fax_ft'));
+		echo '<input type="text" class="iptext_adm" name="fax_ft" value="'.$fax.'" placeholder="">';
+	}
+	function zang_sidebar_email_ft(){
+		$email = esc_attr(get_option('email_ft'));
+		echo '<input type="text" class="iptext_adm" name="email_ft" value="'.$email.'" placeholder="">';
 	}
 
 	function zang_theme_create_page(){
 		require_once(get_template_directory().'/inc/templates/zang-admin.php');
 	}
-
-
-
 
 	function zang_theme_cusfooter_page(){
 		require_once(get_template_directory().'/inc/templates/custom-footer.php');

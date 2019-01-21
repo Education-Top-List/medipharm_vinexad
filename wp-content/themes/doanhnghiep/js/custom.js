@@ -156,15 +156,7 @@ jQuery(document).ready(function(){
 		jQuery('.list_products_categories ul li').click(function(){
 			jQuery(this).addClass('active').siblings().removeClass('active, editBefore_li_product ');
 		});
-        // PAGE TEMPLATE TRACNGHIEM
-        jQuery('.button_start').click(function(){
-        	jQuery('.area_start_button, .page-template-page-template-tracnghiem .content_left h3.widget-title').slideUp();
-        	jQuery('.page-template-page-template-tracnghiem .content_left .wpcf7').delay(300).slideDown();
-        });
-        jQuery('.show_result').click(function(){
-        	jQuery(this).fadeOut(100);
-        	jQuery('.page-template-page-template-tracnghiem .content_left .form_ketquatracnghiem').slideDown(300);
-        });
+
 
 
 			// SHOP POPUP
@@ -174,6 +166,7 @@ jQuery(document).ready(function(){
 				jQuery('.popup_map').find('.content_popup').show();
 				e.preventDefault();
 			});
+
 			jQuery(document).click(function(event) {
  		 //if you click on anything except the modal itself or the "open modal" link, close the modal
  		 if (!jQuery(event.target).closest(".content_popup, .social_ft p ").length) {
