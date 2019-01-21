@@ -53,7 +53,12 @@ if(have_posts()) :
 						</ul>
 						<div class="list_post_categories">
 							<?php 
-							while(have_posts()): the_post();
+							$list_post_arg = array(
+								'post__not_in' => array(622,615)
+							);
+							$list_post_q = new WP_Query();
+							$list_post_q->query($list_post_arg);
+							while($list_post_q->have_posts()): $list_post_q->the_post();
 								get_template_part('content');
 							endwhile;
 							get_template_part('includes/pagination');

@@ -30,6 +30,7 @@ get_header();
 							'order' => 'DESC',
 							'post_type' => 'post',
 							'post_status' => 'publish',
+							'post__not_in' => array(622,615,688,690)
 						);
 						$cmt_post_q = new WP_Query();
 						$cmt_post_q->query($arg_cmt_post_q);
@@ -91,7 +92,8 @@ get_header();
 							'orderby' => 'meta_value_num',
 							'order' => 'DESC',
 							'post_type' => 'post',
-							'post_status' => 'publish'
+							'post_status' => 'publish',
+							'post__not_in' => array(622,615,688,690)
 						);
 						$cmt_post_q = new WP_Query();
 						$cmt_post_q->query($arg_cmt_post_q);
@@ -139,11 +141,12 @@ get_header();
 			<div class="list_post_other">
 				<div class="container">
 					<h2 class="title_tg_top">Bài viết khác</h2>
-					<div class="row">
+					
 						<?php if(have_posts()) : ?>
 							<?php
 							$args = array(
-								'posts_per_page' => 5
+								'posts_per_page' => 5,
+								'post__not_in' => array(622,615,688,690)
 							);
 							$the_query = new WP_Query( $args ); 
 							?>
@@ -154,7 +157,6 @@ get_header();
 								?>
 						<?php endif; ?> 
 					</ul>
-				</div>
 			</div>
 		</div>
 

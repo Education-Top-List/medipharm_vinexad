@@ -263,7 +263,7 @@
      font-style: italic;
      font-size: 18px;
 }
- .content_popup h1{
+ .content_popup h2{
      font-size: 22px;
      text-transform: uppercase;
      background: #b52622;
@@ -656,11 +656,34 @@
 }
 .banner .register_banner .wrap_item_regis_banner{
      text-align: center;
-     background: #288395;
+     background: rgba(40, 131, 149, 1);
      color:#fff;
      border-radius: 10px;
      padding: 20px;
      position: relative;
+     overflow: hidden;
+}
+.banner .register_banner .wrap_item_regis_banner::before{
+         content: "";
+         position: absolute;
+         z-index: 0;
+         top: 0;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         background: rgb(17, 88, 99);
+         -webkit-transform: scaleY(0);
+         transform: scaleY(0);
+         -webkit-transform-origin: 50% 100%;
+         transform-origin: 50% 100%;
+         -webkit-transition-property: transform;
+         transition-property: transform;
+         -webkit-transition: 300ms ease-out;
+         transition: 300ms ease-out;
+}
+.banner .register_banner .wrap_item_regis_banner:hover:before {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
 }
 .banner .register_banner .wrap_item_regis_banner .textwidget a{
      text-indent: -9999px;
@@ -670,10 +693,13 @@
      height: 100%;
      top: 0px;
      left: 0px;
+     z-index: 3;
 }
 .banner .register_banner .wrap_item_regis_banner .textwidget i.fa{
 
 font-size: 30px;
+
+position: relative;
 }
 .banner .register_banner .wrap_item_regis_banner  h4{
 
@@ -682,15 +708,23 @@ text-transform: uppercase;
 margin: 15px 0px 8px 0px;
 
 font-size: 19px;
+
+position: relative;
+
+z-index: 1;
 }
 .banner .register_banner .wrap_item_regis_banner b{
      
 font-size: 15px;
      
 font-weight: normal;
+     
+position: relative;
 }
  .banner .textwidget p {
      margin:0px !important;
+     /* position: relative; */
+     /* z-index: 2; */
  }
  .banner  .widget-title{
      display: none;
@@ -1192,16 +1226,27 @@ font-weight: normal;
  .fixed_menu {
      position: fixed;
      z-index: 9999;
-     box-shadow: 3px 3px 10px #9bd062;
+     box-shadow: 3px 3px 10px #b52622;
 }
  .fixed_menu .nav_primary ul li a{
-     padding:9px 15px;
+     padding: 14px 15px;
      font-size: 11px;
 }
  .fixed_menu .search_header{
-     margin:3px 0px 0px 0px;
+     margin: 8px 0px 0px 0px;
 }
-
+.fixed_menu .nav_primary ul li.menu-item-has-children::before{
+     top:16px;
+}
+.fixed_menu .nav_primary ul>li:hover>ul.sub-menu{
+     top:43px;
+}
+.fixed_menu .nav_primary ul>li>ul.sub-menu{
+     width: 190px;
+}
+.fixed_menu  .nav_primary ul>li>ul.sub-menu>li>a{
+     font-size: 12px;
+}
 /* list_post_highlight*/
 .list_post_highlight .wrap_thumb .thumbnail{
      height: 200px;
@@ -1370,7 +1415,8 @@ font-weight: normal;
 }
 .page-template-page-template-chiphigianhang .cost_exhibiting .textwidget p{
      font-size:15px;
-     line-height: 23px;
+     line-height: 25px;
+     margin: 0px;
 }
 .page-template-page-template-chiphigianhang .cost_exhibiting  .panel-layout>.panel-grid{
      margin:0px 0px 30px 0px !important;
@@ -1526,6 +1572,23 @@ line-height: 23px;
      text-align: center;
      color: #fff;
      font-size: 14px;
+     transition: all 0.3s;
+}
+.social_ft ul>li:nth-child(1):hover i.fa{
+     background: #4063ae;
+     border:1px solid #4063ae ;
+}
+.social_ft ul>li:nth-child(2):hover i.fa{
+     background: #02aaea;
+     border:1px solid #02aaea ;
+}
+.social_ft ul>li:nth-child(3):hover i.fa{
+     background: #d6453a;
+     border:1px solid #d6453a ;
+}
+.social_ft ul>li:nth-child(4):hover i.fa{
+     background: #1d9cec;
+     border:1px solid #1d9cec ;
 }
 
 /* page-template-page-template-lienhe */

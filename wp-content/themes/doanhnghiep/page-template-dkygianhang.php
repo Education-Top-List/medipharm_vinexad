@@ -11,7 +11,7 @@ get_header();
 			<div class="row">
 				<div class="col-md-9 col-sm-9 content_left">
 					
-				ĐĂNG KÝ MUA HÀNG
+				<h1>Đăng ký gian hàng</h1>
 				
 			</div><!-- content_left -->
 			<div class="col-md-3 col-sm-3 sidebar">

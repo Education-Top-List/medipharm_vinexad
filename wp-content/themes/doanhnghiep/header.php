@@ -66,9 +66,8 @@
 					<div class="textwidget">
 								<p><i class="fa fa-map-marker" aria-hidden="true"></i><strong>Địa chỉ : </strong> <em> Số 3 Ngách 22/163 Đường Khuyến Lương - Trần Phú - Hoàng Mai - Hà Nội</em></p>
 						<p><i class="fa fa-phone" aria-hidden="true"></i><strong>Hotline : </strong><a href="tel:0969 95 99 88"> 0934.632.399</a></p>
-					<?php echo get_option('address'); ?>
+					<?php //echo get_option('address'); echo get_option('address_en') ; echo get_option('phone_ft'); echo get_option('address_ft')  ?>
 					</div>
-					
 				</div>
 				<?php // outputs a flags list (without languages names) ?>
 			
