@@ -9,8 +9,8 @@
 		// Generate zang admin page
 		add_menu_page('zang Theme Option','ZQ Framework' , 'manage_options' , 'template_admin_zang', 'zang_theme_create_page', 	get_template_directory_uri() . '/images/setting_icon.png', 110);
 		// Generate Sunset Admin Sub pages
-		add_submenu_page('template_admin_zang', 'Custom Text Header','Text Header', 'manage_options' , 'template_admin_zang', 'zang_theme_create_page');
-		add_submenu_page('template_admin_zang', 'Custom Text Footer', 'Text Footer', 'manage_options' , 'template_custom_footer', 'zang_theme_cusfooter_page');
+		add_submenu_page('template_admin_zang', 'Custom Text Header','Custom Text Header', 'manage_options' , 'template_admin_zang', 'zang_theme_create_page');
+		add_submenu_page('template_admin_zang', 'Custom Text Footer', 'Custom Text Footer', 'manage_options' , 'template_custom_footer', 'zang_theme_cusfooter_page');
 		// Activate custom setttings
 		add_action('admin_init', 'zang_custom_settings');
 	}
@@ -31,6 +31,8 @@
 		register_setting('zang-custom-footer','address_ft');
 		register_setting('zang-custom-footer','address_ft_en');
 		register_setting('zang-custom-footer','phone_ft');
+		register_setting('zang-custom-footer','fax');
+		register_setting('zang-custom-footer','email');
 		add_settings_section('zang-customft-option','Custom content footer','zang_customft_option','template_custom_footer');
 		add_settings_field('address-ft','Address Footer', 'zang_sidebar_address_ft','template_custom_footer', 'zang-customft-option');
 		add_settings_field('phone-ft','Phone Footer', 'zang_sidebar_phone_ft','template_custom_footer', 'zang-customft-option');
@@ -56,7 +58,9 @@
 	}
 	function zang_sidebar_address_ft(){
 		$address_ft = esc_attr(get_option('address_ft'));
+		$address_ft_en = esc_attr(get_option('address_ft_en'));
 		echo '<input type="text" name="address_ft" value="'.$address_ft.'" placeholder="Vietnamese">';
+		echo '<input type="text" name="address_ft_en" value="'.$address_ft_en.'" placeholder="English">';
 	}
 	function zang_sidebar_phone_ft(){
 		$phone_ft = esc_attr(get_option('phone_ft'));

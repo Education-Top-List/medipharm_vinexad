@@ -20,7 +20,7 @@ get_header();
 		<div class="content_left">
 			<div class="list_post_news">
 				<div class="container">
-					<?php if(get_locale() == 'en_US'){?> <h2 class="title_tg_top">New Post</h2>
+					<?php if(get_locale() == 'en_US'){?> <h2 class="title_tg_top">New Posts</h2>
 					<?php }  else if(get_locale() == 'vi'){ ?><h2 class="title_tg_top">Bài viết mới nhất</h2> <?php } ?>
 					<div class="row">
 						<?php 
@@ -83,7 +83,8 @@ get_header();
 			</div>
 			<div class="list_post_highlight">
 				<div class="container">
-					<h2 class="title_tg_top">Bài viết nổi bật </h2>
+					<?php if(get_locale() == 'en_US'){?> <h2 class="title_tg_top">Featured posts</h2>
+					<?php }  else if(get_locale() == 'vi'){ ?><h2 class="title_tg_top">Bài viết nổi bật</h2> <?php } ?>
 					<div class="row">
 						<?php 
 						$arg_cmt_post_q = array(
@@ -140,7 +141,8 @@ get_header();
 
 			<div class="list_post_other">
 				<div class="container">
-					<h2 class="title_tg_top">Bài viết khác</h2>
+					<?php if(get_locale() == 'en_US'){?> <h2 class="title_tg_top">Featured posts</h2>
+					<?php }  else if(get_locale() == 'vi'){ ?><h2 class="title_tg_top">Bài viết khác</h2> <?php } ?>
 					
 						<?php if(have_posts()) : ?>
 							<?php

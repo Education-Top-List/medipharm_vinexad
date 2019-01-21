@@ -182,8 +182,28 @@ jQuery(document).ready(function(){
  		 }
  		});
 
+
 			var width = jQuery(window).width();
 			if(width>1200){
+				jQuery('.address_header, .title_tg_top,.list_post_news .most-commented>li,.list_post_other ul>li,.host_patronize,.dvi_dtnn,.dvi_join,.info_ft')
+				.attr({"data-wow-delay" : "0.3s", "data-wow-duration" : "1s"}).addClass("wow animated fadeInUp ");
+				jQuery('.logo_site').attr({"data-wow-delay" : "0.3s", "data-wow-duration" : "1s"}).addClass("wow animated zoomIn ");
+				jQuery('.register_banner .container>.col-sm-4:nth-child(1)').attr({"data-wow-delay" : "0.5s", "data-wow-duration" : "1s"}).addClass("wow animated zoomIn ");
+				jQuery('.register_banner .container>.col-sm-4:nth-child(2)').attr({"data-wow-delay" : "0.7s", "data-wow-duration" : "1s"}).addClass("wow animated zoomIn ");
+				jQuery('.register_banner .container>.col-sm-4:nth-child(3)').attr({"data-wow-delay" : "0.9s", "data-wow-duration" : "1s"}).addClass("wow animated zoomIn ");
+				jQuery('.list_post_highlight ul>li:nth-child(1)').attr({"data-wow-delay" : "0.3s", "data-wow-duration" : "1s"}).addClass("wow animated zoomIn ");
+				jQuery('.list_post_highlight ul>li:nth-child(2)').attr({"data-wow-delay" : "0.45s", "data-wow-duration" : "1s"}).addClass("wow animated zoomIn ");
+				jQuery('.list_post_highlight ul>li:nth-child(3)').attr({"data-wow-delay" : "0.6s", "data-wow-duration" : "1s"}).addClass("wow animated zoomIn ");
+				jQuery('.list_post_highlight ul>li:nth-child(4)').attr({"data-wow-delay" : "0.75s", "data-wow-duration" : "1s"}).addClass("wow animated zoomIn ");
+				jQuery('.list_post_highlight ul>li:nth-child(5)').attr({"data-wow-delay" : "0.9s", "data-wow-duration" : "1s"}).addClass("wow animated zoomIn ");
+				jQuery('.list_post_highlight ul>li:nth-child(6)').attr({"data-wow-delay" : "1.1s", "data-wow-duration" : "1s"}).addClass("wow animated zoomIn ");
+				jQuery('.social_ft ul>li:nth-child(1)').attr({"data-wow-delay" : "0.7s", "data-wow-duration" : "1s"}).addClass("wow animated bounceIn ");
+				jQuery('.social_ft ul>li:nth-child(2)').attr({"data-wow-delay" : "0.85s", "data-wow-duration" : "1s"}).addClass("wow animated bounceIn ");
+				jQuery('.social_ft ul>li:nth-child(3)').attr({"data-wow-delay" : "1s", "data-wow-duration" : "1s"}).addClass("wow animated bounceIn ");
+				jQuery('.social_ft ul>li:nth-child(4)').attr({"data-wow-delay" : "1.15s", "data-wow-duration" : "1s"}).addClass("wow animated bounceIn ");
+				jQuery('.social_ft p').attr({"data-wow-delay" : "1.4s", "data-wow-duration" : "1s"}).addClass("wow animated fadeInUp ");
+				jQuery('.copyright').attr({"data-wow-delay" : "2s", "data-wow-duration" : "1s"}).addClass("wow animated fadeInUp ");
+		 			
 				new WOW().init();
 			}
 			
