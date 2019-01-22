@@ -19,6 +19,7 @@
 		// Sidebar Options
 		register_setting('zang-settings-groups', 'address');
 		register_setting('zang-settings-groups', 'address_en');
+		register_setting('zang-settings-groups', 'phone');
 		
 
 		add_settings_section('zang-sidebar-options','Custom content header','zang_sidebar_options','template_admin_zang');

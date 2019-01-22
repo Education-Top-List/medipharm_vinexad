@@ -5,53 +5,61 @@
 	<div class="container">
 		<div class="host_patronize">
 			<div class="row">
-				<div class="host_ft col-sm-3">
-					<h4>CHỦ TRÌ VÀ CHỈ ĐẠO</h4>
-					<ul>
-						<li><figure><img src="<?php echo BASE_URL; ?>/images/chutri1.jpg"></figure></li>
-						<li><figure><img src="<?php echo BASE_URL; ?>/images/chutri2.jpg"></figure></li>
-					</ul>
-				</div>
-				<div class="patronize col-sm-9">
-					<h4>BẢO TRỢ THÔNG TIN</h4>
-					<ul>
-						<li><figure><img src="<?php echo BASE_URL; ?>/images/baotro1.jpg"></figure></li><li><figure><img src="<?php echo BASE_URL; ?>/images/baotro2.jpg"></figure></li>
-						<li><figure><img src="<?php echo BASE_URL; ?>/images/baotro3.jpg"></figure></li><li><figure><img src="<?php echo BASE_URL; ?>/images/baotro14.jpg"></figure></li>
-						<li><figure><img src="<?php echo BASE_URL; ?>/images/baotro5.jpg"></figure></li><li><figure><img src="<?php echo BASE_URL; ?>/images/baotro6.jpg"></figure></li>
-						<li><figure><img src="<?php echo BASE_URL; ?>/images/baotro7.jpg"></figure></li><li><figure><img src="<?php echo BASE_URL; ?>/images/baotro8.jpg"></figure></li>
-						<li><figure><img src="<?php echo BASE_URL; ?>/images/baotro9.jpg"></figure></li><li><figure><img src="<?php echo BASE_URL; ?>/images/baotro10.jpg"></figure></li>
-						<li><figure><img src="<?php echo BASE_URL; ?>/images/baotro11.jpg"></figure></li><li><figure><img src="<?php echo BASE_URL; ?>/images/baotro12.jpg"></figure></li>
-						<li><figure><img src="<?php echo BASE_URL; ?>/images/baotro13.jpg"></figure></li><li><figure><img src="<?php echo BASE_URL; ?>/images/baotro14.jpg"></figure></li>
-						<li><figure><img src="<?php echo BASE_URL; ?>/images/baotro15.jpg"></figure></li><li><figure><img src="<?php echo BASE_URL; ?>/images/baotro16.jpg"></figure></li>
-						<li><figure><img src="<?php echo BASE_URL; ?>/images/baotro17.jpg">
+				<div class="col-sm-3">
+					<div class="host_ft">
+						<h4>CHỦ TRÌ VÀ CHỈ ĐẠO</h4>
+						<ul>
+							<li><figure><img src="<?php echo BASE_URL; ?>/images/chutri1.jpg"></figure></li>
+							<li><figure><img src="<?php echo BASE_URL; ?>/images/chutri2.jpg"></figure></li>
 						</ul>
+					</div>
+				</div>
+				<div class="col-sm-9">
+					<div class="patronize">
+						<h4>BẢO TRỢ THÔNG TIN</h4>
+						<ul>
+							<li><figure><img src="<?php echo BASE_URL; ?>/images/baotro1.jpg"></figure></li><li><figure><img src="<?php echo BASE_URL; ?>/images/baotro2.jpg"></figure></li>
+							<li><figure><img src="<?php echo BASE_URL; ?>/images/baotro3.jpg"></figure></li><li><figure><img src="<?php echo BASE_URL; ?>/images/baotro14.jpg"></figure></li>
+							<li><figure><img src="<?php echo BASE_URL; ?>/images/baotro5.jpg"></figure></li><li><figure><img src="<?php echo BASE_URL; ?>/images/baotro6.jpg"></figure></li>
+							<li><figure><img src="<?php echo BASE_URL; ?>/images/baotro7.jpg"></figure></li><li><figure><img src="<?php echo BASE_URL; ?>/images/baotro8.jpg"></figure></li>
+							<li><figure><img src="<?php echo BASE_URL; ?>/images/baotro9.jpg"></figure></li><li><figure><img src="<?php echo BASE_URL; ?>/images/baotro10.jpg"></figure></li>
+							<li><figure><img src="<?php echo BASE_URL; ?>/images/baotro11.jpg"></figure></li><li><figure><img src="<?php echo BASE_URL; ?>/images/baotro12.jpg"></figure></li>
+							<li><figure><img src="<?php echo BASE_URL; ?>/images/baotro13.jpg"></figure></li><li><figure><img src="<?php echo BASE_URL; ?>/images/baotro14.jpg"></figure></li>
+							<li><figure><img src="<?php echo BASE_URL; ?>/images/baotro15.jpg"></figure></li><li><figure><img src="<?php echo BASE_URL; ?>/images/baotro16.jpg"></figure></li>
+							<li><figure><img src="<?php echo BASE_URL; ?>/images/baotro17.jpg">
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
 			<div class="dvi_dtnn">
 				<div class="row">
 					<div class="col-sm-3">
-						<h4>ĐƠN VỊ TỔ CHỨC</h4>
-						<ul>
-							<li><figure><img src="<?php echo BASE_URL; ?>/images/dvtochuc1.jpg"></figure></li>
-							<li><figure><img src="<?php echo BASE_URL; ?>/images/dvtochuc2.jpg"></figure></li>
-						</ul>
+						<div class="dvi">
+							<h4>ĐƠN VỊ TỔ CHỨC</h4>
+							<ul>
+								<li><figure><img src="<?php echo BASE_URL; ?>/images/dvtochuc1.jpg"></figure></li>
+								<li><figure><img src="<?php echo BASE_URL; ?>/images/dvtochuc2.jpg"></figure></li>
+							</ul>
+						</div>
 					</div>
 					<div class="col-sm-9">
-						<h4>ĐỐI TÁC NƯỚC NGOÀI & ĐỒNG TỔ CHỨC</h4>
-						<ul>
-							<li><figure><img src="<?php echo BASE_URL; ?>/images/doitac1.jpg"></figure></li><li><figure><img src="<?php echo BASE_URL; ?>/images/doitac2.gif"></figure></li>
-							<li><figure><img src="<?php echo BASE_URL; ?>/images/doitac3.jpg"></figure></li><li><figure><img src="<?php echo BASE_URL; ?>/images/doitac4.jpg"></figure></li>
-							<li><figure><img src="<?php echo BASE_URL; ?>/images/doitac5.jpg"></figure></li><li><figure><img src="<?php echo BASE_URL; ?>/images/doitac6.jpg"></figure></li>
-							<li><figure><img src="<?php echo BASE_URL; ?>/images/doitac7.jpg"></figure></li><li><figure><img src="<?php echo BASE_URL; ?>/images/doitac8.gif"></figure></li>
-							<li><figure><img src="<?php echo BASE_URL; ?>/images/doitac9.jpg"></figure></li><li><figure><img src="<?php echo BASE_URL; ?>/images/doitac10.gif"></figure></li>
-							<li><figure><img src="<?php echo BASE_URL; ?>/images/doitac11.jpg"></figure></li><li><figure><img src="<?php echo BASE_URL; ?>/images/doitac12.jpg"></figure></li>
-							<li><figure><img src="<?php echo BASE_URL; ?>/images/doitac13.gif"></figure></li><li><figure><img src="<?php echo BASE_URL; ?>/images/doitac14.jpg"></figure></li>
-							<li><figure><img src="<?php echo BASE_URL; ?>/images/doitac15.gif"></figure></li><li><figure><img src="<?php echo BASE_URL; ?>/images/doitac16.gif"></figure></li>
-							<li><figure><img src="<?php echo BASE_URL; ?>/images/doitac17.jpg"></figure></li><li><figure><img src="<?php echo BASE_URL; ?>/images/doitac18.jpg"></figure></li>
-							<li><figure><img src="<?php echo BASE_URL; ?>/images/doitac19.jpg"></figure></li><li><figure><img src="<?php echo BASE_URL; ?>/images/doitac20.gif"></figure></li>
-							<li><figure><img src="<?php echo BASE_URL; ?>/images/doitac21.jpg"></figure></li><li><figure><img src="<?php echo BASE_URL; ?>/images/doitac22.jpg"></figure></li>
-						</ul>
+						<div class="dtnn">
+							<h4>ĐỐI TÁC NƯỚC NGOÀI & ĐỒNG TỔ CHỨC</h4>
+							<ul>
+								<li><figure><img src="<?php echo BASE_URL; ?>/images/doitac1.jpg"></figure></li><li><figure><img src="<?php echo BASE_URL; ?>/images/doitac2.gif"></figure></li>
+								<li><figure><img src="<?php echo BASE_URL; ?>/images/doitac3.jpg"></figure></li><li><figure><img src="<?php echo BASE_URL; ?>/images/doitac4.jpg"></figure></li>
+								<li><figure><img src="<?php echo BASE_URL; ?>/images/doitac5.jpg"></figure></li><li><figure><img src="<?php echo BASE_URL; ?>/images/doitac6.jpg"></figure></li>
+								<li><figure><img src="<?php echo BASE_URL; ?>/images/doitac7.jpg"></figure></li><li><figure><img src="<?php echo BASE_URL; ?>/images/doitac8.gif"></figure></li>
+								<li><figure><img src="<?php echo BASE_URL; ?>/images/doitac9.jpg"></figure></li><li><figure><img src="<?php echo BASE_URL; ?>/images/doitac10.gif"></figure></li>
+								<li><figure><img src="<?php echo BASE_URL; ?>/images/doitac11.jpg"></figure></li><li><figure><img src="<?php echo BASE_URL; ?>/images/doitac12.jpg"></figure></li>
+								<li><figure><img src="<?php echo BASE_URL; ?>/images/doitac13.gif"></figure></li><li><figure><img src="<?php echo BASE_URL; ?>/images/doitac14.jpg"></figure></li>
+								<li><figure><img src="<?php echo BASE_URL; ?>/images/doitac15.gif"></figure></li><li><figure><img src="<?php echo BASE_URL; ?>/images/doitac16.gif"></figure></li>
+								<li><figure><img src="<?php echo BASE_URL; ?>/images/doitac17.jpg"></figure></li><li><figure><img src="<?php echo BASE_URL; ?>/images/doitac18.jpg"></figure></li>
+								<li><figure><img src="<?php echo BASE_URL; ?>/images/doitac19.jpg"></figure></li><li><figure><img src="<?php echo BASE_URL; ?>/images/doitac20.gif"></figure></li>
+								<li><figure><img src="<?php echo BASE_URL; ?>/images/doitac21.jpg"></figure></li><li><figure><img src="<?php echo BASE_URL; ?>/images/doitac22.jpg"></figure></li>
+							</ul>
+						</div>
 					</div>
 				</div>		
 			</div>
@@ -78,10 +86,20 @@
 				<div class="info_ft">
 					<h3>Công ty Cổ phần Quảng cáo và Hội chợ Thương mại VINEXAD </h3>
 					<ul>
-						<li>Địa chỉ: 9 Đinh Lễ - Q.Hoàn Kiếm – Hà Nội</li>
-						<li>Tel: +84.90.4811648 </li>
-						<li>Fax: +84.24.37911864</li>
-						<li>Email: contact@vinexad.org.vn</li>
+						<?php if(get_option('address_ft')){ ?>
+							<li>
+								<?php if(get_locale() == 'en_US'){ echo get_option('address_ft_en'); } else { echo get_option('address_ft'); }?>
+							</li>
+						<?php } ?>
+						<?php if(get_option('phone_ft')){ ?>
+							<li>Tel: <?php echo get_option('phone_ft'); ?> </li>
+						<?php } ?>
+						<?php if(get_option('fax_ft')){ ?>
+							<li>Fax: <?php echo get_option('fax_ft'); ?> </li>
+						<?php } ?>
+						<?php if(get_option('email_ft')){ ?>
+							<li>Email: <?php echo get_option('email_ft'); ?></li>
+						<?php } ?>
 					</ul>
 				</div>
 				<div class="social_ft">

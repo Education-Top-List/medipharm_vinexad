@@ -67,7 +67,7 @@
 					<div class="textwidget">
 						<?php if(get_option('address')){ ?>
 							<p><i class="fa fa-map-marker" aria-hidden="true"></i><strong>Địa chỉ : </strong> 
-							<em><?php echo get_option('address');  ?> </em></p>
+							<em><?php if(get_locale() == 'en_US'){echo get_option('address_en');} else { echo get_option('address');}  ?> </em></p>
 						<?php }?>
 						<?php if(get_option('phone')){ ?>
 						<p><i class="fa fa-phone" aria-hidden="true"></i><strong>Hotline : </strong>
