@@ -1,5 +1,6 @@
 <?php
-require get_template_directory().'/inc/function-admin.php';
+include get_template_directory().'/includes/aio-list-categories/aio-list-category.php';
+include get_template_directory().'/inc/function-admin.php';
      
       function load_admin_style() {
         wp_register_style( 'admin_css', get_template_directory_uri() . '/css/admin.css', false, '1.0.0' );
@@ -432,6 +433,8 @@ function remove_empty_p($content){
 
 
   
+
+
   
 
 ?>
