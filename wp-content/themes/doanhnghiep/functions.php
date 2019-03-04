@@ -425,6 +425,8 @@ function filter_images($content){
 add_filter('the_content', 'filter_images');
 /* END WRAP IMAGE POST CONTENT WITH FIGURE*/
 
+
+
 add_filter('the_content', 'remove_empty_p', 20, 1);
 function remove_empty_p($content){
     $content = force_balance_tags($content);
@@ -432,9 +434,44 @@ function remove_empty_p($content){
 }
 
 
-  
+// ADD META BOX
+
+function status_event(){
+    add_meta_box('tinh-trang','Trạng thái','tg_status_ouput','post');
+}
+add_action('add_meta_boxes','status_event');
 
 
-  
+function status_event_dropdown(){
+    add_meta_box('tinh-trang-dropdown','Trạng thái dropdowns','tg_status_ouput_dropdown','post');
+}
+add_action('add_meta_boxes','status_event_dropdown');
 
+function tg_status_ouput($post){
+    $status_event = get_post_meta($post->ID, '_status_event',true);
+    echo ('<label for="status"> Trạng thái </label>');
+    echo ('<input type="text" id="status" name="status_event" value="'.$status_event.'" />');
+}
+
+function tg_status_ouput_dropdown ( $post ) {
+?>
+
+          <?php 
+        //get dropdown saved value
+        $selected = esc_attr(get_post_meta( $post->ID, '_multi_dropdown', true )); 
+        ?>
+   <select name="multi_dropdown" id="multi_dropdown" >
+            <option value="Vẫn đang diễn ra" <?php echo ($selected == "first_choice")?  'selected="selected"' : '' ?>> Vẫn đang diễn ra </option>
+            <option value="Hết thời hạn" <?php echo ($selected == "second_choice")?  'selected="selected"' : '' ?>> Hết thời hạn </option>
+    </select>
+<?php
+}
+
+function tg_save($post_id){
+  $status_event = sanitize_text_field($_POST['status_event'] );
+  $status_event_drop = $_POST['multi_dropdown'];
+  update_post_meta( $post_id, '_status_event', $status_event );
+  update_post_meta( $post_id, '_multi_dropdown', $status_event_drop );
+}
+add_action('save_post','tg_save');
 ?>
